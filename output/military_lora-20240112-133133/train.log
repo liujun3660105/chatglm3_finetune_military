@@ -1,0 +1,235 @@
+/Users/liujun/anaconda3/lib/python3.11/site-packages/transformers/utils/generic.py:441: UserWarning: torch.utils._pytree._register_pytree_node is deprecated. Please use torch.utils._pytree.register_pytree_node instead.
+  _torch_pytree._register_pytree_node(
+/Users/liujun/anaconda3/lib/python3.11/site-packages/transformers/utils/generic.py:309: UserWarning: torch.utils._pytree._register_pytree_node is deprecated. Please use torch.utils._pytree.register_pytree_node instead.
+  _torch_pytree._register_pytree_node(
+01/12/2024 13:31:35 - WARNING - __main__ - Process rank: 0, device: mps, n_gpu: 1distributed training: True, 16-bits training: False
+01/12/2024 13:31:35 - INFO - __main__ - Training/evaluation parameters TrainingArguments(
+_n_gpu=1,
+adafactor=False,
+adam_beta1=0.9,
+adam_beta2=0.999,
+adam_epsilon=1e-08,
+auto_find_batch_size=False,
+bf16=False,
+bf16_full_eval=False,
+data_seed=None,
+dataloader_drop_last=False,
+dataloader_num_workers=0,
+dataloader_persistent_workers=False,
+dataloader_pin_memory=True,
+ddp_backend=None,
+ddp_broadcast_buffers=None,
+ddp_bucket_cap_mb=None,
+ddp_find_unused_parameters=None,
+ddp_timeout=1800,
+debug=[],
+deepspeed=None,
+disable_tqdm=False,
+dispatch_batches=None,
+do_eval=True,
+do_predict=False,
+do_train=True,
+eval_accumulation_steps=None,
+eval_delay=0,
+eval_steps=300,
+evaluation_strategy=IntervalStrategy.STEPS,
+fp16=False,
+fp16_backend=auto,
+fp16_full_eval=False,
+fp16_opt_level=O1,
+fsdp=[],
+fsdp_config={'min_num_params': 0, 'xla': False, 'xla_fsdp_grad_ckpt': False},
+fsdp_min_num_params=0,
+fsdp_transformer_layer_cls_to_wrap=None,
+full_determinism=False,
+gradient_accumulation_steps=1,
+gradient_checkpointing=False,
+gradient_checkpointing_kwargs=None,
+greater_is_better=None,
+group_by_length=False,
+half_precision_backend=auto,
+hub_always_push=False,
+hub_model_id=None,
+hub_private_repo=False,
+hub_strategy=HubStrategy.EVERY_SAVE,
+hub_token=<HUB_TOKEN>,
+ignore_data_skip=False,
+include_inputs_for_metrics=False,
+include_num_input_tokens_seen=False,
+include_tokens_per_second=False,
+jit_mode_eval=False,
+label_names=None,
+label_smoothing_factor=0.0,
+learning_rate=0.0002,
+length_column_name=length,
+load_best_model_at_end=False,
+local_rank=0,
+log_level=passive,
+log_level_replica=warning,
+log_on_each_node=True,
+logging_dir=output/military_lora-20240112-133133/logs,
+logging_first_step=False,
+logging_nan_inf_filter=True,
+logging_steps=1.0,
+logging_strategy=IntervalStrategy.STEPS,
+lr_scheduler_kwargs={},
+lr_scheduler_type=SchedulerType.LINEAR,
+max_grad_norm=1.0,
+max_steps=-1,
+metric_for_best_model=None,
+mp_parameters=,
+neftune_noise_alpha=None,
+no_cuda=False,
+num_train_epochs=4.0,
+optim=OptimizerNames.ADAMW_TORCH,
+optim_args=None,
+output_dir=output/military_lora-20240112-133133,
+overwrite_output_dir=False,
+past_index=-1,
+per_device_eval_batch_size=2,
+per_device_train_batch_size=2,
+prediction_loss_only=False,
+push_to_hub=False,
+push_to_hub_model_id=None,
+push_to_hub_organization=None,
+push_to_hub_token=<PUSH_TO_HUB_TOKEN>,
+ray_scope=last,
+remove_unused_columns=True,
+report_to=['tensorboard', 'wandb'],
+resume_from_checkpoint=None,
+run_name=output/military_lora-20240112-133133,
+save_on_each_node=False,
+save_only_model=False,
+save_safetensors=True,
+save_steps=300,
+save_strategy=IntervalStrategy.STEPS,
+save_total_limit=None,
+seed=42,
+skip_memory_metrics=True,
+split_batches=False,
+tf32=None,
+torch_compile=False,
+torch_compile_backend=None,
+torch_compile_mode=None,
+torchdynamo=None,
+tpu_metrics_debug=False,
+tpu_num_cores=None,
+use_cpu=False,
+use_ipex=False,
+use_legacy_prediction_loop=False,
+use_mps_device=False,
+warmup_ratio=0.0,
+warmup_steps=0,
+weight_decay=0.0,
+)
+[INFO|tokenization_utils_base.py:2024] 2024-01-12 13:31:35,689 >> loading file tokenizer.model
+[INFO|tokenization_utils_base.py:2024] 2024-01-12 13:31:35,689 >> loading file added_tokens.json
+[INFO|tokenization_utils_base.py:2024] 2024-01-12 13:31:35,689 >> loading file special_tokens_map.json
+[INFO|tokenization_utils_base.py:2024] 2024-01-12 13:31:35,689 >> loading file tokenizer_config.json
+[INFO|tokenization_utils_base.py:2024] 2024-01-12 13:31:35,690 >> loading file tokenizer.json
+[INFO|configuration_utils.py:737] 2024-01-12 13:31:35,749 >> loading configuration file /Users/liujun/learing/AI/self-deployment/model/chatGLM/chatGLM3/config.json
+[INFO|configuration_utils.py:737] 2024-01-12 13:31:35,750 >> loading configuration file /Users/liujun/learing/AI/self-deployment/model/chatGLM/chatGLM3/config.json
+[INFO|configuration_utils.py:802] 2024-01-12 13:31:35,750 >> Model config ChatGLMConfig {
+  "_name_or_path": "/Users/liujun/learing/AI/self-deployment/model/chatGLM/chatGLM3",
+  "add_bias_linear": false,
+  "add_qkv_bias": true,
+  "apply_query_key_layer_scaling": true,
+  "apply_residual_connection_post_layernorm": false,
+  "architectures": [
+    "ChatGLMModel"
+  ],
+  "attention_dropout": 0.0,
+  "attention_softmax_in_fp32": true,
+  "auto_map": {
+    "AutoConfig": "configuration_chatglm.ChatGLMConfig",
+    "AutoModel": "modeling_chatglm.ChatGLMForConditionalGeneration",
+    "AutoModelForCausalLM": "modeling_chatglm.ChatGLMForConditionalGeneration",
+    "AutoModelForSeq2SeqLM": "modeling_chatglm.ChatGLMForConditionalGeneration",
+    "AutoModelForSequenceClassification": "modeling_chatglm.ChatGLMForSequenceClassification"
+  },
+  "bias_dropout_fusion": true,
+  "classifier_dropout": null,
+  "eos_token_id": 2,
+  "ffn_hidden_size": 13696,
+  "fp32_residual_connection": false,
+  "hidden_dropout": 0.0,
+  "hidden_size": 4096,
+  "kv_channels": 128,
+  "layernorm_epsilon": 1e-05,
+  "model_type": "chatglm",
+  "multi_query_attention": true,
+  "multi_query_group_num": 2,
+  "num_attention_heads": 32,
+  "num_layers": 28,
+  "original_rope": true,
+  "pad_token_id": 0,
+  "padded_vocab_size": 65024,
+  "post_layer_norm": true,
+  "pre_seq_len": null,
+  "prefix_projection": false,
+  "quantization_bit": 0,
+  "rmsnorm": true,
+  "seq_length": 8192,
+  "tie_word_embeddings": false,
+  "torch_dtype": "float16",
+  "transformers_version": "4.36.2",
+  "use_cache": true,
+  "vocab_size": 65024
+}
+
+[INFO|modeling_utils.py:3341] 2024-01-12 13:31:35,844 >> loading weights file /Users/liujun/learing/AI/self-deployment/model/chatGLM/chatGLM3/model.safetensors.index.json
+[INFO|configuration_utils.py:826] 2024-01-12 13:31:35,845 >> Generate config GenerationConfig {
+  "eos_token_id": 2,
+  "pad_token_id": 0
+}
+
+Loading checkpoint shards:   0%|          | 0/7 [00:00<?, ?it/s]Loading checkpoint shards:  14%|█▍        | 1/7 [00:00<00:03,  1.67it/s]Loading checkpoint shards:  29%|██▊       | 2/7 [00:01<00:03,  1.63it/s]Loading checkpoint shards:  43%|████▎     | 3/7 [00:01<00:02,  1.61it/s]Loading checkpoint shards:  57%|█████▋    | 4/7 [00:02<00:01,  1.65it/s]Loading checkpoint shards:  71%|███████▏  | 5/7 [00:04<00:02,  1.10s/it]Loading checkpoint shards:  86%|████████▌ | 6/7 [00:06<00:01,  1.32s/it]Loading checkpoint shards: 100%|██████████| 7/7 [00:07<00:00,  1.20s/it]Loading checkpoint shards: 100%|██████████| 7/7 [00:07<00:00,  1.01s/it]
+[INFO|modeling_utils.py:4185] 2024-01-12 13:31:42,971 >> All model checkpoint weights were used when initializing ChatGLMForConditionalGeneration.
+
+[INFO|modeling_utils.py:4193] 2024-01-12 13:31:42,971 >> All the weights of ChatGLMForConditionalGeneration were initialized from the model checkpoint at /Users/liujun/learing/AI/self-deployment/model/chatGLM/chatGLM3.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use ChatGLMForConditionalGeneration for predictions without further training.
+[INFO|modeling_utils.py:3751] 2024-01-12 13:31:42,973 >> Generation config file not found, using a generation config created from the model config.
+[WARNING|modeling_utils.py:2045] 2024-01-12 13:31:50,150 >> You are using an old version of the checkpointing format that is deprecated (We will also silently ignore `gradient_checkpointing_kwargs` in case you passed it).Please update to the new format on your modeling file. To use the new format, you need to completely remove the definition of the method `_set_gradient_checkpointing` in your model.
+[INFO|trainer.py:1706] 2024-01-12 13:31:50,248 >> ***** Running training *****
+[INFO|trainer.py:1707] 2024-01-12 13:31:50,248 >>   Num examples = 390
+[INFO|trainer.py:1708] 2024-01-12 13:31:50,248 >>   Num Epochs = 4
+[INFO|trainer.py:1709] 2024-01-12 13:31:50,248 >>   Instantaneous batch size per device = 2
+[INFO|trainer.py:1712] 2024-01-12 13:31:50,248 >>   Total train batch size (w. parallel, distributed & accumulation) = 2
+[INFO|trainer.py:1713] 2024-01-12 13:31:50,248 >>   Gradient Accumulation steps = 1
+[INFO|trainer.py:1714] 2024-01-12 13:31:50,248 >>   Total optimization steps = 780
+[INFO|trainer.py:1715] 2024-01-12 13:31:50,249 >>   Number of trainable parameters = 1,949,696
+[INFO|integration_utils.py:722] 2024-01-12 13:31:50,252 >> Automatic Weights & Biases logging enabled, to disable set os.environ["WANDB_DISABLED"] = "true"
+trainable params: 1,949,696 || all params: 6,245,533,696 || trainable%: 0.031217444255383614
+wandb: ERROR api_key not configured (no-tty). call wandb.login(key=[your_api_key])
+Traceback (most recent call last):
+  File "/Users/liujun/learing/AI/fine-tune/军事大模型微调/chatglm3_finetune_military/fine_tune_inputoutput/main_lora.py", line 130, in <module>
+    main()
+  File "/Users/liujun/learing/AI/fine-tune/军事大模型微调/chatglm3_finetune_military/fine_tune_inputoutput/main_lora.py", line 123, in main
+    trainer.train()
+  File "/Users/liujun/anaconda3/lib/python3.11/site-packages/transformers/trainer.py", line 1537, in train
+    return inner_training_loop(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/liujun/anaconda3/lib/python3.11/site-packages/transformers/trainer.py", line 1772, in _inner_training_loop
+    self.control = self.callback_handler.on_train_begin(args, self.state, self.control)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/liujun/anaconda3/lib/python3.11/site-packages/transformers/trainer_callback.py", line 370, in on_train_begin
+    return self.call_event("on_train_begin", args, state, control)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/liujun/anaconda3/lib/python3.11/site-packages/transformers/trainer_callback.py", line 414, in call_event
+    result = getattr(callback, event)(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/liujun/anaconda3/lib/python3.11/site-packages/transformers/integrations/integration_utils.py", line 767, in on_train_begin
+    self.setup(args, state, model, **kwargs)
+  File "/Users/liujun/anaconda3/lib/python3.11/site-packages/transformers/integrations/integration_utils.py", line 740, in setup
+    self._wandb.init(
+  File "/Users/liujun/anaconda3/lib/python3.11/site-packages/wandb/sdk/wandb_init.py", line 1189, in init
+    raise e
+  File "/Users/liujun/anaconda3/lib/python3.11/site-packages/wandb/sdk/wandb_init.py", line 1166, in init
+    wi.setup(kwargs)
+  File "/Users/liujun/anaconda3/lib/python3.11/site-packages/wandb/sdk/wandb_init.py", line 308, in setup
+    wandb_login._login(
+  File "/Users/liujun/anaconda3/lib/python3.11/site-packages/wandb/sdk/wandb_login.py", line 298, in _login
+    wlogin.prompt_api_key()
+  File "/Users/liujun/anaconda3/lib/python3.11/site-packages/wandb/sdk/wandb_login.py", line 228, in prompt_api_key
+    raise UsageError("api_key not configured (no-tty). call " + directive)
+wandb.errors.UsageError: api_key not configured (no-tty). call wandb.login(key=[your_api_key])

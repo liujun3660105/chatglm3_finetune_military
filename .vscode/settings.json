@@ -1,0 +1,5 @@
+{
+    "python.analysis.extraPaths": [
+        "./fine_tune_inputoutput"
+    ]
+}
