@@ -138,8 +138,11 @@ class Evaluator:
         correct_slot_count = 0
 
         # 读取测试集
-        with open(self.data_path,'r') as f:
-            test_data = [json.loads(line) for line in f]
+        with open(data_args.train_file, "r", encoding="utf-8") as f:
+            if data_args.train_file.endswith(".json"):
+                test_data = json.load(f)
+            elif data_args.train_file.endswith(".jsonl"):
+                test_data = [json.loads(line) for line in f]
 
         system_prompt = 'Answer the following questions as best as you can. You have access to the following tools:\n'
 
